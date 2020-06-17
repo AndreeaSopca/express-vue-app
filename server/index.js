@@ -18,7 +18,7 @@ if(process.env.NODE_ENV === 'production'){
     app.use(express.static(__dirname + '/public'));
 
     // Handel single page application
-    app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+    app.use(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
 
 }
 
