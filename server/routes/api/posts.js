@@ -5,18 +5,26 @@ const router = express.Router();
 
 // Get posts
 router.get('/', async (req, res) => {
-    const posts = await loadPostsCollection();
-    res.send(await posts.find({}).toArray())
+    const posts = [{
+        text: "first",
+        createdAt: new Date()
+    },
+        {
+            text: "second",
+            createdAt: new Date()
+        }];
+    // const posts = await loadPostsCollection();
+    res.send(posts)
 
 });
 
 // Add post
 router.post('/', async (req, res) => {
-    const posts = await loadPostsCollection();
-    await posts.insertOne({
-        text: req.body.text,
-        createdAt: new Date()
-    });
+    // const posts = await loadPostsCollection();
+    // await posts.insertOne({
+    //     text: req.body.text,
+    //     createdAt: new Date()
+    // });
     res.status(201).send();
 
 });

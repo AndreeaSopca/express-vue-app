@@ -11,6 +11,10 @@ const posts = require('./routes/api/posts');
 
 app.use('/api/posts', posts);
 
+app.use("/", function(req, res) {
+    res.send("Hello")
+})
+
 
 // Handle production
 if(process.env.NODE_ENV === 'production'){
