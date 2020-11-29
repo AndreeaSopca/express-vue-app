@@ -11,7 +11,7 @@ const posts = require('./routes/api/posts');
 
 app.use('/api/posts', posts);
 
-app.use("/", function(req, res) {
+app.use("/api/posts/test", function(req, res) {
     res.send("Hello")
 })
 
