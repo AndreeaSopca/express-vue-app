@@ -4,7 +4,7 @@
   "description": "Fullstack vue and express app tutorial",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node server/index.js test 2 ",
     "dev": "nodemon server/index.js"
   },
   "author": "Andreea Sopca",
